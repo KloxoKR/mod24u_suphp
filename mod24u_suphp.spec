@@ -19,7 +19,7 @@ URL: http://www.suphp.org/
 Packager: Dag Wieers <dag@wieers.com>
 Vendor: Dag Apt Repository, http://dag.wieers.com/apt/
 
-Source0: http://projects.marsching.org/suphp/download/%{real_name}-%{version}.tar.bz2
+Source0: https://github.com/smarsching/suphp/releases/download/last/%{real_name}-%{version}.tar.gz
 Patch0: suphp-0.7.2_accept-httpd-2.4.patch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 
