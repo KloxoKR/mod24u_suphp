@@ -19,16 +19,11 @@ URL: http://www.suphp.org/
 Packager: Dag Wieers <dag@wieers.com>
 Vendor: Dag Apt Repository, http://dag.wieers.com/apt/
 
-Source0: https://github.com/smarsching/suphp/releases/download/last/%{real_name}-%{version}.tar.gz
+Source0: http://projects.marsching.org/suphp/download/%{real_name}-%{version}.tar.bz2
 Patch0: suphp-0.7.2_accept-httpd-2.4.patch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 
-BuildRequires: httpd-devel >= 2.4, gcc-c++, automake, autoconf, libtool
-%if %{?fedora}0 > 150 || %{?rhel}0 > 60
-BuildRequires:	apr-devel
-%else
-BuildRequires:	apr15u-devel
-%endif
+BuildRequires: httpd-devel >= 2.4, gcc-c++, automake, autoconf, libtool, apr15u-devel
 # Hardcode httpd-mm value for copr build
 Requires:	httpd-mmn = 20120211x8664
 #Requires: httpd-mmn = %([ -a %{_includedir}/httpd/.mmn ] && cat %{_includedir}/httpd/.mmn || echo missing)
